@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid h-100 px-0" id="content">
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+        <strong><h1 class="lead text-white" id="brand">Student Central Database <i class="fas fa-database"></i></h1></strong>
+        <div class="row"><img class="img-fluid rounded-circle my-0 mx-2" style="height:25px" id="icon">
+        <strong><h1 class="lead text-white" id="logout">Logout <i class="fas fa-sign-out-alt"></i></h1></strong></div>
+    </div>
+</nav>
+<div class="container">
+    <div class="mt-4 d-block" id="greet">
+    </div>
+    <div class="row mx-0 mt-4">
+        <div class="card w-100 border-0 animated zoomInUp">
+          <div class="card-header border-0" role="tab" id="headingTwo">
+            <h5 class="mb-0">
+              <h5 class="collapsed text-dark tools" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">
+                Search Tools <i class="fas fa-wrench"></i>
+              </h5>
+            </h5>
+          </div>
+          <div id="collapse" class="collapse" role="tabpanel" aria-labelledby="heading">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <h6>Strong Search <i class="fas fa-search"></i></h6>
+                        <div class="row pl-2">
+                            <div class="col px-1 my-1">
+                                <input type="text" class="form-control" id="strong_search" placeholder="All Columns">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <h6>Entries <i class="fas fa-list-ol"></i></h6>
+                        <div class="row pl-2 pt-1">
+                            <select class="form-control" id="entries">
+                                <option value="5">5</option>
+                                <option value="10" selected>10</option>
+                                <option value="15">15</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <div class="row d-flex justify-content-between px-3">
+                            <h6>Filters <i class="fas fa-filter"></i></h6>
+                            <h6 id="reset" data-id="1">Reset <i class="fas fa-redo"></i></h6>
+                        </div>
+                        <div class="row pl-2">
+                            <div class="col-4 px-1 my-1">
+                                <input type="text" class="form-control filter" id="index" placeholder="Index #">
+                            </div>
+                            <div class="col-4 px-1 my-1">
+                                <input type="text" class="form-control filter" id="school" placeholder="School">
+                            </div>
+                            <div class="col-4 px-1 my-1">
+                                <select class="form-control filter" id="degree">
+                                    <option disabled selected hidden value="">Degree</option>
+                                    <option value="">All</option>
+                                </select>
+                            </div>
+                            <div class="col-4 px-1 my-1">
+                                <select class="form-control filter" id="year">
+                                    <option disabled selected hidden value="">Year</option>
+                                    <option value="1">1st</option>
+                                    <option value="2">2nd</option>
+                                    <option value="3">3rd</option>
+                                    <option value="4">4th</option>
+                                    <option value="5">5th</option>
+                                    <option value="">All</option>
+                                </select>
+                            </div>
+                            <div class="col-4 px-1 my-1">
+                                <input type="text" class="form-control filter" id="section" placeholder="Section">
+                            </div>
+                            <div class="col-4 px-1 my-1">
+                                <select class="form-control filter" id="sy">
+                                    <option disabled selected hidden value="">Batch</option>
+                                    <option value="">All</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</div>
+    <div class="row d-inline animated zoomInUp slower" id="main">
+
+
+    </div>
+</div>
+</div>
+<script src="{% static 'js/process/checker.js' %}"></script>
+<script src="{% static 'js/process/batch.js' %}"></script>
+{% endblock content %}

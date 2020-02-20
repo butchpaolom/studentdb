@@ -1,0 +1,42 @@
+.dirty-fog {
+    background: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 100%);
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+table th, table tr, .tools, #reset, #admin_link{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#logout, #brand {
+    cursor: pointer;
+}
+
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #22232d;
+    border-color: #22232d;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color:  #22232d;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+
+/* 
+background-image: url('/media/background.jpg');
+background-size: cover;
+background-position: center; */
